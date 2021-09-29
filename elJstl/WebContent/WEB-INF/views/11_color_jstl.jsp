@@ -16,7 +16,7 @@
 </head>
 <body>
 
-
+	<h3>스크립틀릿</h3>
 
 	<%
 	if( "1".equals( request.getParameter("color") ) ) {	
@@ -31,8 +31,31 @@
 	%>
 		<span style="color: blue">파랑</span>
 	<%
+	} else {
+		%>
+		<span style="color: black">검정</span>
+		<%
 	}
 	%>
+	
+	<h3>JSTL 조건 분기</h3>
+	<%-- c:choose, c:when, c:otherwise
+		Java의 if ~ else if ~ else 문의 역할
+	 --%>
+	<c:choose>
+		<c:when test="${param.color == 1 }">
+			<span style="color: red">빨강</span>	<!-- if -->
+		</c:when>
+		<c:when test="${param.color == 2 }">
+			<span style="color: green">녹색</span> <!-- else if -->
+		</c:when>
+		<c:when test="${param.color == 3 }">
+			<span style="color: blue">파랑</span> <!-- else if -->
+		</c:when>
+		<c:otherwise> 							 <!-- else -->
+			<span style="color: black">검정</span>
+		</c:otherwise>
+	</c:choose>
 
 
 	
