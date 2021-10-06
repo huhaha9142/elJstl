@@ -1,4 +1,5 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿<%@page import="vo.UserVo" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 
 <!DOCTYPE html>
@@ -14,7 +15,6 @@
 	//	Attribute 받아오기
 	Integer jspIval = (Integer)request.getAttribute("iVal");
 	UserVo jspUserVo = (UserVo)request.getAttribute("userVo");
-	
 	%>
 	<ul>
 		<li>정수형: <%= jspIval %></li>
